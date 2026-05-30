@@ -272,7 +272,11 @@ int main(void) {
     printf("\n  p[i] : ");
     for (i = 1; i <= MAX_BASE; i++) printf("%4d", p[i]);
     printf("\n  (para i > 10: p[i] = 3*i)\n\n");
-
+    /* Cenario 0: valores pequenos — recursiva viavel para comparacao */
+    printf("=== CENARIO 0 --- n = 15  e  n = 20 ===\n\n");
+    { int c0[] = {15, 20};
+      for (k = 0; k < 2; k++) benchmark(p, c0[k], 1); }
+   
     /* Cenario 1: n = 50 e n = 80 */
     printf("=== CENARIO 1 --- n = 50  e  n = 80 ===\n\n");
     { int c1[] = {50, 80};
